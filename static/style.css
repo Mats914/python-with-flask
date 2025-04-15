@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif; /* Anger teckensnitt för hela sidan */
+    margin: 0; /* Tar bort marginaler runt sidan */
+    padding: 0; /* Tar bort padding från sidan */
+    padding-bottom: 40px; /* Lägger till botten-padding för att undvika att footern täcker innehållet */
+    background-color: #f0f0f0; /* Sätter bakgrundsfärg till en ljus grå */
+}
+
+/* Headern på sidan */
+header {
+    background-color: #ff99cc; /* Sätter bakgrundsfärgen på headern */
+    color: white; /* Sätter textfärgen till vit */
+    padding: 20px; /* Lägger till padding i headern */
+    text-align: center; /* Centrerar texten */
+}
+
+nav ul {
+    list-style-type: none; /* Tar bort punktlistan från navigationen */
+    padding: 0; /* Tar bort padding från listan */
+    text-align: center; /* Centrerar navigationslänkarna */
+}
+
+nav ul li {
+    display: inline; /* Visar listobjekten på samma rad */
+    margin: 0 10px; /* Lägger till marginal mellan länkarna */
+}
+
+nav ul li a {
+    color: white; /* Sätter länkfärgen till vit */
+    text-decoration: none; /* Tar bort understrykningen från länkarna */
+}
+
+h1, h2 {
+    color: #ff3366; /* Sätter färgen på rubrikerna */
+}
+
+/* Design för produktbilder */
+.bakverk-images {
+    display: flex; /* Använder flexbox för att ordna bilderna */
+    flex-wrap: wrap; /* Gör att bilderna kan bryta rad vid behov */
+    gap: 20px; /* Lägger till avstånd mellan bilderna */
+    justify-content: center; /* Centrerar bilderna */
+    padding: 20px; /* Lägger till padding runt bilderna */
+}
+
+.bakverk-item {
+    flex: 1 1 calc(50% - 20px); /* Gör att varje bild tar upp 50% av bredden */
+    box-sizing: border-box; /* Inkluderar padding och border i elementets totala bredd */
+    max-width: 50%; /* Sätter maximal bredd till 50% */
+    background-color: white; /* Sätter bakgrundsfärgen till vit */
+    border: 1px solid #ddd; /* Lägger till en tunn grå border */
+    border-radius: 8px; /* Rundar hörnen på varje bild */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lägger till en lätt skugga runt varje bild */
+    overflow: hidden; /* Döljer eventuellt överskridande innehåll */
+    text-align: center; /* Centrerar innehållet */
+    padding: 10px; /* Lägger till padding inuti varje bildblock */
+}
+
+.bakverk-item img {
+    width: 100%; /* Sätter bildens bredd till 100% av föräldraelementets bredd */
+    height: auto; /* Bevarar bildens proportioner */
+    object-fit: cover; /* Gör att bilden täcker hela området utan att förvrängas */
+    border-bottom: 1px solid #ddd; /* Lägger till en tunn grå linje under bilden */
+}
+
+/* Formulärdesign */
+form {
+    display: flex; /* Använder flexbox för att ordna formulärfälten vertikalt */
+    flex-direction: column; /* Sätter flex-riktningen till vertikal */
+}
+
+form input, form select, form textarea {
+    margin: 10px 0; /* Lägger till marginaler mellan formulärfälten */
+    padding: 10px; /* Lägger till padding inuti formulärfälten */
+    width: 100%; /* Sätter bredden på fälten till 100% */
+    box-sizing: border-box; /* Inkluderar padding och border i elementets totala bredd */
+}
+
+form input[type="submit"] {
+    background-color: #ff3366; /* Sätter bakgrundsfärgen på knappen */
+    color: white; /* Sätter textfärgen till vit */
+    border: none; /* Tar bort border från knappen */
+    cursor: pointer; /* Ändrar muspekaren till en pekare vid hovring */
+    padding: 12px; /* Lägger till padding i knappen */
+    width: auto; /* Sätter bredden på knappen till automatiskt */
+    margin-top: 10px; /* Lägger till toppmarginal för knappen */
+}
+
+/* Footerdesign */
+footer {
+    background-color: #ff99cc; /* Sätter bakgrundsfärgen på footern */
+    color: white; /* Sätter textfärgen till vit */
+    text-align: center; /* Centrerar texten i footern */
+    padding: 5px; /* Lägger till padding i footern */
+    font-size: 12px; /* Sätter textstorleken till 12px */
+    position: fixed; /* Fixerar footern längst ner på sidan */
+    bottom: 0; /* Sätter footern längst ner */
+    width: 100%; /* Gör footern lika bred som sidan */
+    z-index: 1000; /* Sätter z-index för att säkerställa att footern är överst */
+}
+
+footer p {
+    margin: 2px 0; /* Lägger till lite marginal mellan textstycken i footern */
+}
+
+/* Mediaqueries för större skärmar */
+@media (max-width: 1200px) {
+    .bakverk-images {
+        gap: 40px; /* Ökar gapet mellan bilder på större skärmar */
+    }
+}
+
+/* Mediaqueries för mediumstora skärmar */
+@media (max-width: 768px) {
+    header {
+        padding: 15px; /* Minskar padding i headern */
+    }
+
+    .bakverk-item {
+        flex: 1 1 100%; /* Gör att varje bild tar upp hela bredden på mindre skärmar */
+        max-width: 100%; /* Sätter max-bredden på bilder till 100% */
+    }
+
+    footer {
+        font-size: 12px; /* Minskar textstorleken i footern */
+    }
+
+    section {
+        margin: 10px; /* Lägger till margin runt sektioner */
+        padding: 15px; /* Lägger till padding i sektioner */
+    }
+
+    form input[type="submit"] {
+        padding: 10px; /* Justerar padding i submit-knappen */
+    }
+}
+
+/* Mediaqueries för små skärmar */
+@media (max-width: 480px) {
+    .bakverk-images {
+        gap: 10px; /* Minskar gapet mellan bilder på små skärmar */
+    }
+
+    h1, h2 {
+        font-size: 18px; /* Minskar storleken på rubriker */
+    }
+
+    form input[type="submit"] {
+        width: 100%; /* Sätter bredden på submit-knappen till 100% */
+        padding: 8px; /* Minskar padding i submit-knappen */
+    }
+}

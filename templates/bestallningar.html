@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html lang="sv">
+<head>
+    <!-- Anger teckenkodning som UTF-8 för korrekt visning av svenska tecken -->
+    <meta charset="UTF-8">
+    <!-- Gör sidan responsiv genom att anpassa layouten till olika enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beställningar - Sött & Elegant</title>
+    <!-- Länkar till en extern CSS-fil för att styla sidan -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Huvudheader med sidans titel och navigationsmeny -->
+    <header>
+        <h1>Beställningar</h1>
+        
+    </header>
+
+    <!-- Sektion för att göra en beställning -->
+    <section>
+        <h2>Gör en beställning</h2>
+        <p>Fyll i formuläret nedan för att göra en beställning av dina favoritbakverk. Vi ser fram emot att skapa något speciellt för dig!</p>
+        
+        <!-- Formulär för att skicka beställningsinformation -->
+        <form>
+            <!-- Fält för namn -->
+            <label for="namn">Namn:</label>
+            <input type="text" id="namn" name="namn" required><br>
+
+            <!-- Fält för att välja produkt -->
+            <label for="produkt">Välj produkt:</label>
+            <select id="produkt" name="produkt" required>
+                <option value="">Välj en produkt</option> 
+                <option value="tarta">Tårta</option>
+                <option value="smakakor">Småkakor</option>
+                <option value="muffins">Muffins</option>
+            </select><br>
+
+            <!-- Fält för att välja datum för leverans -->
+            <label for="datum">Datum för leverans:</label>
+            <input type="date" id="datum" name="datum" required><br>
+
+            <!-- Fält för meddelande eller specialönskemål -->
+            <label for="meddelande">Meddelande eller specialönskemål:</label>
+            <textarea id="meddelande" name="meddelande" rows="4" placeholder="Skriv här om du har några specifika önskemål (t.ex. smak, dekoration, allergier)"></textarea><br>
+
+            <!-- Skicka-knapp för att skicka beställningen -->
+            <input type="submit" value="Skicka beställning">
+        </form>
+    </section>
+
+    <!-- Sidfot med företagsinformation och öppettider -->
+    <footer>
+        <p>Vår adress: Sött & Elegant, Stockholm, Sverige</p>
+        <p>Öppettider: Måndag - Fredag, 08:00 - 18:00</p>
+        <p>© 2024 Sött & Elegant - Alla rättigheter reserverade.</p>
+    </footer>
+</body>
+</html>

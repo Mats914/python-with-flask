@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8"> <!-- Anger teckenkodningen som används för dokumentet, vilket gör att svenska tecken visas korrekt -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gör sidan responsiv så att den anpassar sig efter skärmstorleken på olika enheter -->
+    <title>Bakverk - Sött & Elegant</title> <!-- Titel som visas i webbläsarens flik -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Länkar till extern CSS-fil som styr utseendet på webbsidan -->
+</head>
+<body>
+    <header>
+        <h1>Bakverk</h1> <!-- Huvudrubrik som beskriver sidan -->
+       
+    </header>
+
+    <section>
+        <h2>Våra populäraste bakverk</h2> <!-- Rubrik för sektionen som visar populära bakverk -->
+        <div class="bakverk-images"> <!-- Container som håller alla bilder på bakverk -->
+            <div class="bakverk-item"> <!-- En enskild bakverksbild med beskrivning -->
+                <img src="{{ url_for('static', filename='Cake2.jpg') }}" alt="Ursnygga bakverk2"> <!-- Bild på en bröllopstårta -->
+                <p><strong>Bröllopstårtor:</strong> Våra bröllopstårtor är skapade för att göra er stora dag ännu mer speciell...</p> <!-- Beskrivning av bröllopstårtor -->
+            </div>
+            <div class="bakverk-item"> <!-- En annan bakverksbild med beskrivning -->
+                <img src="{{ url_for('static', filename='Cake1.jpg') }}" alt="Ursnygga bakverk1"> <!-- Bild på en födelsedagstårta -->
+                <p><strong>Födelsedagstårtor:</strong> Födelsedagstårtor från oss är både en fest för ögonen och smaklökarna...</p> <!-- Beskrivning av födelsedagstårtor -->
+            </div>
+            <div class="bakverk-item"> <!-- En ytterligare bakverksbild med beskrivning -->
+                <img src="{{ url_for('static', filename='Cake.jpg') }}" alt="Ursnygga bakverk3"> <!-- Bild på småkakor och muffins -->
+                <p><strong>Småkakor och muffins:</strong> Vårat sortiment av småkakor och muffins är perfekt för alla tillfällen...</p> <!-- Beskrivning av småkakor och muffins -->
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <!-- Sidfot med kontaktinformation och öppettider -->
+        <p>Vår adress: Sött & Elegant, Stockholm, Sverige</p> <!-- Företagets adress -->
+        <p>Öppettider: Måndag - Fredag, 08:00 - 18:00</p> <!-- Företagets öppettider -->
+        <p>© 2024 Sött & Elegant - Alla rättigheter reserverade.</p> <!-- Copyright-information -->
+    </footer>
+</body>
+</html>

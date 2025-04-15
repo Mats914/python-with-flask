@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html lang="sv">
+<head>
+    <!-- Anger teckenkodning som UTF-8 för korrekt visning av svenska tecken -->
+    <meta charset="UTF-8">
+    <!-- Gör sidan responsiv genom att anpassa layouten till olika enheter -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sött & Elegant - Startsida</title>
+    <!-- Länkar till en extern CSS-fil för att styla sidan -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Huvudheader med sidans titel och navigationsmeny -->
+    <header>
+        <h1>Välkommen till Sött & Elegant</h1>
+       
+    </header>
+
+    <!-- Sektion för att visa bakverk -->
+    <section>
+        <h2>Våra bakverk</h2>
+        <p>Upptäck våra utsökta bakverk, perfekta för alla tillfällen!</p>
+        
+        <!-- Visa bilder på bakverk i ett galleri -->
+        <div class="bakverk-images">
+            <!-- Bakverk 1 -->
+            <div class="bakverk-item">
+                <img src="{{ url_for('static', filename='Cake.jpg') }}" alt="Ursnygga bakverk">
+            </div>
+            <!-- Bakverk 2 -->
+            <div class="bakverk-item">
+                <img src="{{ url_for('static', filename='Cake1.jpg') }}" alt="Ursnygga bakverk1">
+            </div>
+            <!-- Bakverk 3 -->
+            <div class="bakverk-item">
+                <img src="{{ url_for('static', filename='Cake2.jpg') }}" alt="Ursnygga bakverk2">
+            </div>
+            <!-- Bakverk 4 -->
+            <div class="bakverk-item">
+                <img src="{{ url_for('static', filename='Cake4.jpg') }}" alt="Ursnygga bakverk4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidfot med företagsinformation och öppettider -->
+    <footer>
+        <p>Vår adress: Sött & Elegant, Stockholm, Sverige</p>
+        <p>Öppettider: Måndag - Fredag, 08:00 - 18:00</p>  
+        <p>© 2024 Sött & Elegant - Alla rättigheter reserverade.</p>
+    </footer>
+</body>
+</html>
